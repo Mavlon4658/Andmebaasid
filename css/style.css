@@ -278,6 +278,59 @@ body {
 .header__right_block .lang a.active {
   color: #4C4FDD;
 }
+.header__right_block .account_name {
+  gap: 6px;
+}
+.header__right_block .account_name .name {
+  font-size: 14px;
+  font-weight: 300;
+  line-height: 130%;
+}
+.header__right_block .account_name .name b {
+  font-weight: 700;
+}
+
+#login_modal .modal-content {
+  position: relative;
+  display: block;
+  padding: 0;
+}
+#login_modal .modal-content .modal_close {
+  position: absolute;
+  width: 22px;
+  height: 23px;
+  top: 32px;
+  right: 15px;
+  left: auto;
+}
+#login_modal .modal-content form {
+  padding: 35px 50px;
+}
+#login_modal .modal-content form .main_title {
+  margin-bottom: 20px;
+}
+#login_modal .modal-content form .alert_error {
+  border-left: 2px solid #E90000;
+  padding: 10px 20px;
+  background: rgba(244, 98, 98, 0.2);
+  color: white;
+  font-size: 16px;
+  color: #E90000;
+}
+#login_modal .modal-content form input {
+  border: 1px solid #EBEBEB;
+  width: 100%;
+  border-radius: 5px;
+  height: 40px;
+  padding: 0 20px;
+  font-size: 16px;
+}
+#login_modal .modal-content form input:focus {
+  border-color: #363636;
+}
+#login_modal .modal-content form .btn_blue {
+  margin-top: 20px;
+}
 
 .sort-block label {
   font-size: 14px;

@@ -43,11 +43,48 @@
                         <span class="line"></span>
                         <a href="#">ENG</a>
                     </div>
-                    <a href="#" class="btn_darkblue">Sisse logimine</a>
+                    <button class="btn_darkblue" data-bs-toggle="modal" data-bs-target="#login_modal">Sisse logimine</button>
+                    <a href="#" class="d-flex align-items-center account_name">
+                        <span class="text-end name">
+                            Tere, <br>
+                            <b>Martin!</b>
+                        </span>
+                        <img src="./images/account_icon.png" alt="">
+                    </a>
                 </div>
             </div>
         </header>
         <!-- Header end -->
+
+        <!-- Login modal -->
+        
+        <!-- Modal -->
+        <div class="modal fade" id="login_modal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="false">
+            <div class="modal-dialog">
+            <div class="modal-content">
+                <button class="modal_close" data-bs-dismiss="modal" aria-label="Close">
+                    <img src="./images/close_icon.svg" alt="">
+                </button>
+                <form class="d-flex flex-column gap-3">
+                    <h2 class="text-center main_title">Sisse logimine</h2>
+
+                    <!-- For something errors -->
+                    <div class="alert_error">Логин или пароль указаны неверно</div>
+
+                    <div class="form_control">
+                        <input type="text" placeholder="Логин">
+                    </div>
+                    <div class="form_control">
+                        <input type="password" placeholder="Пароль">
+                    </div>
+                    <div>
+                        <button type="submit" class="btn_blue">Logi välja</button>
+                    </div>
+                </form>
+            </div>
+            </div>
+        </div>
+        <!-- Login modal end -->
 
         <div class="history_wrap">
             <!-- Sort Block -->
