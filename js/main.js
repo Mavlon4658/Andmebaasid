@@ -16,22 +16,25 @@ if ($('.resizer-x').length) {
             }
             function ontouchmove(e) {
                 e.preventDefault();
-                const clientX = e.touches[0].clientX;
-                const deltaX = clientX - (resizer._clientX || clientX);
-                resizer._clientX = clientX;
-                const l = resizer.previousElementSibling;
-                const r = resizer.nextElementSibling;
-                // LEFT
-                if (deltaX < 0) {
-                    const w = Math.round(parseInt(getComputedStyle(l).width) + deltaX);
-                    l.style.flex = `0 ${w < 10 ? 0 : w}px`;
-                    r.style.flex = "1 0";
-                }
-                // RIGHT
-                if (deltaX > 0) {
-                    const w = Math.round(parseInt(getComputedStyle(r).width) - deltaX);
-                    r.style.flex = `0 ${w < 10 ? 0 : w}px`;
-                    l.style.flex = "1 0";
+                let block = $('.resizable-block')[0].getBoundingClientRect();
+                if (e.touches[0].clientX > block.left && e.touches[0].clientX < block.left + block.width) {
+                    const clientX = e.touches[0].clientX;
+                    const deltaX = clientX - (resizer._clientX || clientX);
+                    resizer._clientX = clientX;
+                    const l = resizer.previousElementSibling;
+                    const r = resizer.nextElementSibling;
+                    // LEFT
+                    if (deltaX < 0) {
+                        const w = Math.round(parseInt(getComputedStyle(l).width) + deltaX);
+                        l.style.flex = `0 ${w < 10 ? 0 : w}px`;
+                        r.style.flex = "1 0";
+                    }
+                    // RIGHT
+                    if (deltaX > 0) {
+                        const w = Math.round(parseInt(getComputedStyle(r).width) - deltaX);
+                        r.style.flex = `0 ${w < 10 ? 0 : w}px`;
+                        l.style.flex = "1 0";
+                    }
                 }
             }
             function ontouchend(e) {
