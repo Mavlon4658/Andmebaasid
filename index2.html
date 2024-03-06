@@ -9,6 +9,8 @@
 
     <!-- Bootstrap 5.3 -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <!-- Light gallery -->
+    <link href="https://cdn.rawgit.com/sachinchoolur/lightgallery.js/master/dist/css/lightgallery.css" rel="stylesheet">
     <!-- css link -->
     <link rel="stylesheet" href="./css/style.css">
 </head>
@@ -88,7 +90,7 @@
         <!-- Login modal end -->
 
         <!-- Sort Block -->
-        <section class="sort-block">
+        <section class="sort-block index_2">
             <div class="main_container">
                 <div class="d-flex justify-content-between sort-block__content">
                     <div class="d-flex align-items-center sort-block__content_left">
@@ -96,41 +98,21 @@
                             <label>Ülesande nimi</label>
                             <input type="text" class="input_gray" value="Ülesanne nr 2">
                         </div>
-                        <div class="d-flex flex-column select_wrap">
+                        <div class="d-flex flex-column input_wrap">
                             <label>Lause tüüp</label>
-                            <select>
-                                <option selected hidden>Select advanced</option>
-                                <option value="1">One</option>
-                                <option value="2">Two</option>
-                                <option value="3">Three</option>
-                            </select>
+                            <input type="text" class="input_gray" value="Select advanced">
                         </div>
-                        <div class="d-flex flex-column select_wrap">
+                        <div class="d-flex flex-column input_wrap">
                             <label>Keerukus</label>
-                            <select>
-                                <option selected hidden>Keskmine</option>
-                                <option value="1">One</option>
-                                <option value="2">Two</option>
-                                <option value="3">Three</option>
-                            </select>
+                            <input type="text" class="input_gray" value="Keskmine">
                         </div>
-                        <div class="d-flex flex-column select_wrap">
+                        <div class="d-flex flex-column input_wrap">
                             <label>Andmebaas</label>
-                            <select>
-                                <option selected hidden>Postgresql</option>
-                                <option value="1">One</option>
-                                <option value="2">Two</option>
-                                <option value="3">Three</option>
-                            </select>
+                            <input type="text" class="input_gray" value="Postgresql">
                         </div>
-                        <div class="d-flex flex-column select_wrap">
+                        <div class="d-flex flex-column input_wrap">
                             <label>Lahendamise seisund</label>
-                            <select>
-                                <option selected hidden>Tehtud</option>
-                                <option value="1">One</option>
-                                <option value="2">Two</option>
-                                <option value="3">Three</option>
-                            </select>
+                            <input type="text" class="input_gray" value="Tehtud">
                         </div>
                     </div>
                     <div class="sort-block__content_right">
@@ -160,7 +142,7 @@
                             <div class="d-flex align-items-start justify-content-between main_accordion__head">
                                 <div class="title">Ülesande kirjeldus:</div>
                                 <div class="d-flex">
-                                    <span class="text">Vaata oodatud tulemus</span>
+                                    <span class="text" data-bs-toggle="modal" data-bs-target="#expected_modal">Vaata oodatud tulemus</span>
                                     <span class="icon">
                                         <svg width="10" height="8" viewBox="0 0 10 8" fill="none" xmlns="http://www.w3.org/2000/svg">
                                             <path d="M5.86603 7.5C5.48113 8.16667 4.51887 8.16667 4.13397 7.5L0.669874 1.5C0.284974 0.833333 0.7661 -8.94676e-07 1.5359 -8.27378e-07L8.4641 -2.21695e-07C9.2339 -1.54397e-07 9.71503 0.833333 9.33013 1.5L5.86603 7.5Z" fill="#363636"/>
@@ -168,18 +150,18 @@
                                     </span>
                                 </div>
                             </div>
-                            <div class="main_accordion__body">
+                            <div class="main_accordion__body open">
                                 <p class="task__description">
                                     There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text. All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, making this the first true generator on the Internet. It uses a dictionary of over 200 Latin words, combined with a handful of model sentence structures, to generate Lorem Ipsum which looks reasonable. The generated Lorem Ipsum is therefore always free from repetition, injected humour, or non-characteristic words etc.
                                 </p>
                             </div>
                         </div>
 
-                        <div class="pb-4 main_accordion">
+                        <div class="pb-4 main_accordion active">
                             <div class="d-flex align-items-start justify-content-between main_accordion__head">
                                 <div class="title">Tabelite struktuur</div>
                                 <div class="d-flex">
-                                    <span class="text">Vaata andmeid</span>
+                                    <span class="text" data-bs-toggle="modal" data-bs-target="#table_modal">Vaata andmeid</span>
                                     <span class="icon">
                                         <svg width="10" height="8" viewBox="0 0 10 8" fill="none" xmlns="http://www.w3.org/2000/svg">
                                             <path d="M5.86603 7.5C5.48113 8.16667 4.51887 8.16667 4.13397 7.5L0.669874 1.5C0.284974 0.833333 0.7661 -8.94676e-07 1.5359 -8.27378e-07L8.4641 -2.21695e-07C9.2339 -1.54397e-07 9.71503 0.833333 9.33013 1.5L5.86603 7.5Z" fill="#363636"/>
@@ -196,7 +178,7 @@
                             </div>
                         </div>
 
-                        <div class="pb-4 main_accordion">
+                        <div class="pb-4 main_accordion active">
                             <div class="d-flex align-items-start justify-content-between main_accordion__head">
                                 <div class="title">Vihjed</div>
                                 <div class="d-flex">
@@ -210,19 +192,19 @@
                             </div>
                             <div class="main_accordion__body">
                                 <div class="hints">
-                                    <div class="hints__top">
-                                        ❗Järgmine vihje on saadaval pärast 2. katset 
+                                    <div class="d-flex align-items-center hints__top">
+                                        <img src="./images/warnin_icon.png" alt="" class="me-1"> Järgmine vihje on saadaval pärast 2. katset 
                                     </div>
                                     <div class="hints__bottom">
-                                        Vihje №1:
-                                        <br><br>
-                                        There are many variations of passages of Lorem Ip sum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. 
+Vihje №1:
+
+There are many variations of passages of Lorem Ip sum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. 
                                     </div>
                                 </div>
                             </div>
                         </div>
 
-                        <div class="main_accordion solution_accordion">
+                        <div class="main_accordion solution_accordion active">
                             <div class="d-flex align-items-start justify-content-between main_accordion__head">
                                 <div class="title">Lahendus</div>
                                 <div class="d-flex">
@@ -236,10 +218,10 @@
                             </div>
                             <div class="main_accordion__body">
                                 <div class="hints">
-                                    <div class="hints__top">
-                                        ❗️️️️️️️Lahendus on saadaval pärast 10. katset 
+                                    <div class="align-items-center hints__top d-flex">
+                                        <img src="./images/warnin_icon.png" class="me-1" alt=""> Lahendus on saadaval pärast 10. katset 
                                     </div>
-                                    <textarea class="main_textarea">select t.*
+                                    <div class="hints__bottom">select t.*
 from #Movements t
 LEFT JOIN (
 SELECT EventCode, MIN(CreateDate) as CreateDate
@@ -247,7 +229,7 @@ FROM #Movements
 WHERE EventCode = 'EMI'
 GROUP BY EventCode
 ) s on s.EventCode = t.EventCode and t.CreateDate > s.CreateDate
-where s.CreateDateis null</textarea>
+where s.CreateDateis null</div>
                                 </div>
                             </div>
                         </div>
@@ -291,14 +273,26 @@ where s.CreateDateis null</textarea>
                             </div>
                         </form>
 
-                        <div class="solution__result">
+                        <div class="d-none justify-content-center w-100 py-4 gap-1 solution__loading">
+                            <div class="spinner-grow d-none text-secondary spinner-grow-sm" role="status">
+                                <span class="visually-hidden">Loading...</span>
+                            </div>
+                            <div class="spinner-grow d-none text-secondary spinner-grow-sm" role="status">
+                                <span class="visually-hidden">Loading...</span>
+                            </div>
+                            <div class="spinner-grow d-none text-secondary spinner-grow-sm" role="status">
+                                <span class="visually-hidden">Loading...</span>
+                            </div>
+                        </div>
+
+                        <div class="d-none solution__result">
                             <h2 class="main_title">Tulemus:</h2>
 
                             <div class="solution__result_top">
                                 <div class="d-flex justify-content-between solution__result_top__head">
-                                    <div class="solution__result_top__head_left">
+                                    <div class="d-flex solution__result_top__head_left">
                                         Olek:
-                                        <span>❌ Tekkis viga</span>
+                                        <span class="d-flex align-items-center"><img src="./images/close_danger_icon.png" alt="" class="me-1"> Tekkis viga</span>
                                     </div>
                                     <div class="solution__result_top__head_right">
                                         Ridade arv:  <span>10</span>
@@ -448,6 +442,217 @@ where s.CreateDateis null</textarea>
         </footer>
         <!-- Footer end -->
 
+        <!-- Expected results modal -->
+        <div class="modal fade" id="expected_modal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="false">
+            <div class="modal-dialog">
+            <div class="modal-content">
+                <button class="modal_close" data-bs-dismiss="modal" aria-label="Close">
+                    <img src="./images/close_icon.svg" alt="">
+                </button>
+                <h2 class="text-center main_title">OODATUD TULEMUS</h2>
+                <div class="text-center table_title">Koodi käivitamise oodatav tulemus:</div>
+                <div class="overflo_x_scroll main_table">
+                    <table class="rounded">
+                        <thead>
+                            <tr>
+                                <td>veerg 1</td>
+                                <td>veerg 2</td>
+                                <td>veerg 3</td>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>data</td>
+                                <td>data</td>
+                                <td>data</td>
+                            </tr>
+                            <tr>
+                                <td>data</td>
+                                <td>data</td>
+                                <td>data</td>
+                            </tr>
+                            <tr>
+                                <td>data</td>
+                                <td>data</td>
+                                <td>data</td>
+                            </tr>
+                            <tr>
+                                <td>data</td>
+                                <td>data</td>
+                                <td>data</td>
+                            </tr>
+                            <tr>
+                                <td>data</td>
+                                <td>data</td>
+                                <td>data</td>
+                            </tr>
+                            <tr>
+                                <td>data</td>
+                                <td>data</td>
+                                <td>data</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="d-flex justify-content-center">
+                    <ul class="d-inline-flex align-items-center table_pagination">
+                        <li>
+                            <a href="#" class="active">1</a>
+                        </li>
+                        <li>
+                            <a href="#">2</a>
+                        </li>
+                        <li>
+                            <a href="#">3</a>
+                        </li>
+                        <li>
+                            <a href="#">4</a>
+                        </li>
+                        <li>
+                            <a href="#">5</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            </div>
+        </div>
+        <!-- Expected results modal end -->
+
+        <!-- Table structure modal -->
+        <div class="modal fade" id="table_modal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="false">
+            <div class="modal-dialog">
+            <div class="modal-content">
+                <button class="modal_close" data-bs-dismiss="modal" aria-label="Close">
+                    <img src="./images/close_icon.svg" alt="">
+                </button>
+                <h2 class="text-center main_title">OODATUD TULEMUS</h2>
+                <ul class="d-flex align-items-center justify-content-center mb-4 table_structure__type">
+                    <li>
+                        <a href="#" class="active">TABLE 1 <br> +1000</a>
+                    </li>
+                    <li>
+                        <a href="#">TABLE 2 <br> +1000</a>
+                    </li>
+                    <li>
+                        <a href="#">TABLE 3 <br> +20</a>
+                    </li>
+                </ul>
+                <div class="overflo_x_scroll main_table">
+                    <table class="rounded">
+                        <thead>
+                            <tr>
+                                <td>veerg 1</td>
+                                <td>veerg 2</td>
+                                <td>veerg 3</td>
+                                <td>veerg 4</td>
+                                <td>veerg 5</td>
+                                <td>veerg 6</td>
+                                <td>veerg 7</td>
+                                <td>veerg 8</td>
+                                <td>veerg 9</td>
+                                <td>veerg 10</td>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>data</td>
+                                <td>data</td>
+                                <td>data</td>
+                                <td>data</td>
+                                <td>data</td>
+                                <td>data</td>
+                                <td>data</td>
+                                <td>data</td>
+                                <td>data</td>
+                                <td>data</td>
+                            </tr>
+                            <tr>
+                                <td>data</td>
+                                <td>data</td>
+                                <td>data</td>
+                                <td>data</td>
+                                <td>data</td>
+                                <td>data</td>
+                                <td>data</td>
+                                <td>data</td>
+                                <td>data</td>
+                                <td>data</td>
+                            </tr>
+                            <tr>
+                                <td>data</td>
+                                <td>data</td>
+                                <td>data</td>
+                                <td>data</td>
+                                <td>data</td>
+                                <td>data</td>
+                                <td>data</td>
+                                <td>data</td>
+                                <td>data</td>
+                                <td>data</td>
+                            </tr>
+                            <tr>
+                                <td>data</td>
+                                <td>data</td>
+                                <td>data</td>
+                                <td>data</td>
+                                <td>data</td>
+                                <td>data</td>
+                                <td>data</td>
+                                <td>data</td>
+                                <td>data</td>
+                                <td>data</td>
+                            </tr>
+                            <tr>
+                                <td>data</td>
+                                <td>data</td>
+                                <td>data</td>
+                                <td>data</td>
+                                <td>data</td>
+                                <td>data</td>
+                                <td>data</td>
+                                <td>data</td>
+                                <td>data</td>
+                                <td>data</td>
+                            </tr>
+                            <tr>
+                                <td>data</td>
+                                <td>data</td>
+                                <td>data</td>
+                                <td>data</td>
+                                <td>data</td>
+                                <td>data</td>
+                                <td>data</td>
+                                <td>data</td>
+                                <td>data</td>
+                                <td>data</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="d-flex justify-content-start">
+                    <ul class="d-inline-flex align-items-center table_pagination">
+                        <li>
+                            <a href="#" class="active">1</a>
+                        </li>
+                        <li>
+                            <a href="#">2</a>
+                        </li>
+                        <li>
+                            <a href="#">3</a>
+                        </li>
+                        <li>
+                            <a href="#">4</a>
+                        </li>
+                        <li>
+                            <a href="#">5</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            </div>
+        </div>
+        <!-- Table structure modal end -->
+
     </div>
 
 
@@ -455,6 +660,13 @@ where s.CreateDateis null</textarea>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
     <!-- Jquery 3.7 -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdn.rawgit.com/sachinchoolur/lightgallery.js/master/dist/js/lightgallery.js"></script>
+    <script src="https://cdn.rawgit.com/sachinchoolur/lg-pager.js/master/dist/lg-pager.js"></script>
+    <script src="https://cdn.rawgit.com/sachinchoolur/lg-autoplay.js/master/dist/lg-autoplay.js"></script>
+    <script src="https://cdn.rawgit.com/sachinchoolur/lg-fullscreen.js/master/dist/lg-fullscreen.js"></script>
+    <script src="https://cdn.rawgit.com/sachinchoolur/lg-zoom.js/master/dist/lg-zoom.js"></script>
+    <script src="https://cdn.rawgit.com/sachinchoolur/lg-hash.js/master/dist/lg-hash.js"></script>
+    <script src="https://cdn.rawgit.com/sachinchoolur/lg-share.js/master/dist/lg-share.js"></script>
     <!-- JS file -->
     <script src="./js/main.js"></script>
 </body>
