@@ -1018,4 +1018,32 @@ body {
 
 .lg-next.lg-icon {
   left: auto;
+}
+
+#clear_history_modal .modal-content {
+  width: 470px;
+  min-width: 470px;
+  padding: 35px 116px 37px;
+}
+#clear_history_modal .modal-content .modal_close {
+  position: absolute;
+  left: auto;
+  top: 17px;
+  right: 17px;
+}
+#clear_history_modal .modal-content .main_title span {
+  color: #4C4FDD;
+}
+#clear_history_modal .modal-content .btn_blue {
+  width: 100%;
+  padding: 0;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 37px 0 24px;
+}
+#clear_history_modal .modal-content button.close, #clear_history_modal .modal-content a.close {
+  font-size: 14px;
+  line-height: 108.33%;
 }/*# sourceMappingURL=style.css.map */

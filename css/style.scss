@@ -1331,3 +1331,41 @@ body {
     left: auto;
 }
 // Table structure modal end
+
+// Clear history modal
+#clear_history_modal {
+    .modal-content {
+        width: 470px;
+        min-width: 470px;
+        padding: 35px 116px 37px;
+
+        .modal_close {
+            position: absolute;
+            left: auto;
+            top: 17px;
+            right: 17px;
+        }
+
+        .main_title {
+            span {
+                color: $color-blue;
+            }
+        }
+
+        .btn_blue {
+            width: 100%;
+            padding: 0;
+            height: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 37px 0 24px;
+        }
+
+        button.close, a.close {
+            font-size: 14px;
+            line-height: 108.33%;
+        }
+    }
+}
+// Clear history modal end
