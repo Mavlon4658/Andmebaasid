@@ -73,6 +73,10 @@ body {
   line-height: 108.33%;
   border-radius: 5px;
   padding: 12px 10px 13px 11px;
+  transition: 0.3s ease all;
+}
+.btn_darkblue:hover {
+  background: #363636;
 }
 .btn_blue {
   background: #4C4FDD;
@@ -81,6 +85,10 @@ body {
   padding: 12px 65px 13px;
   font-size: 14px;
   line-height: 108.33%;
+  transition: 0.3s ease all;
+}
+.btn_blue:hover {
+  background: #9697F5;
 }
 .btn_danger {
   background: #E90000;
@@ -89,6 +97,10 @@ body {
   padding: 12px 10px 13px 11px;
   font-size: 14px;
   line-height: 108.33%;
+  transition: 0.3s ease all;
+}
+.btn_danger:hover {
+  background: #F46262;
 }
 
 .input_gray {
@@ -440,6 +452,38 @@ body {
 @media screen and (max-width: 1420px) {
   .sort-block.index_2 .input_wrap:first-child {
     width: 100%;
+  }
+}
+@media screen and (max-width: 1400px) {
+  .sort-block.tasks_page .sort-block__content_left {
+    width: calc(100% - 180px);
+    flex-wrap: wrap;
+  }
+}
+@media screen and (max-width: 1400px) {
+  .sort-block.tasks_page .sort-block__content_left .input_wrap {
+    width: 100%;
+  }
+}
+@media screen and (max-width: 1400px) {
+  .sort-block.tasks_page .sort-block__content_left .select_wrap {
+    width: calc(25% - 19.5px);
+  }
+  .sort-block.tasks_page .sort-block__content_left .select_wrap select {
+    width: 100%;
+  }
+}
+@media screen and (max-width: 1400px) {
+  .sort-block.tasks_page .sort-block__content_right {
+    align-items: flex-end;
+  }
+}
+@media screen and (max-width: 1400px) {
+  .sort-block.tasks_page .sort-block__content_right .btn_blue {
+    padding-top: 15px;
+    padding-bottom: 15px;
+    justify-content: center;
+    display: flex;
   }
 }
 
@@ -969,6 +1013,8 @@ body {
 .task_block__left .main_table {
   padding: 0;
   margin: 0;
+  max-height: 523px;
+  overflow-y: scroll;
 }
 .task_block__left .main_table table thead td {
   border-radius: 0 !important;
@@ -999,7 +1045,7 @@ body {
   justify-content: space-between;
 }
 .task_block__right {
-  width: 100%;
+  width: calc(100% - 324px);
   padding: 0;
 }
 .task_block__right_head {
@@ -1020,6 +1066,9 @@ body {
   padding-bottom: 11px;
   border-bottom: 1px solid #EBEBEB;
   margin-bottom: 11px;
+}
+.task_block__right .main_table table {
+  min-width: 830px;
 }
 
 #expected_modal .modal-content {

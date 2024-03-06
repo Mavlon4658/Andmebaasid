@@ -102,6 +102,11 @@ body {
         line-height: 108.33%;
         border-radius: 5px;
         padding: 12px 10px 13px 11px;
+        transition: .3s ease all;
+
+        &:hover {
+            background: $color-dark;
+        }
     }
 
     &_blue {
@@ -111,6 +116,11 @@ body {
         padding: 12px 65px 13px;
         font-size: 14px;
         line-height: 108.33%;
+        transition: .3s ease all;
+
+        &:hover {
+            background: #9697F5;
+        }
     }
 
     &_danger {
@@ -120,6 +130,11 @@ body {
         padding: 12px 10px 13px 11px;
         font-size: 14px;
         line-height: 108.33%;
+        transition: .3s ease all;
+
+        &:hover {
+            background: #F46262;
+        }
     }
 }
 
@@ -560,6 +575,48 @@ body {
 
                 @include media(1420) {
                     width: 100%;
+                }
+            }
+        }
+    }
+
+    &.tasks_page {
+        .sort-block__content {
+            &_left {
+                @include media(1400) {
+                    width: calc(100% - 180px);
+                    flex-wrap: wrap;
+                }
+
+                .input_wrap {
+                    @include media(1400) {
+                        width: 100%;
+                    }
+                }
+
+                .select_wrap {
+                    @include media(1400) {
+                        width: calc(25% - 26px * 3 / 4);
+
+                        select {
+                            width: 100%;
+                        }
+                    }
+                }
+            }
+
+            &_right {
+                @include media(1400) {
+                    align-items: flex-end;
+                }
+
+                .btn_blue {
+                    @include media(1400) {
+                        padding-top: 15px;
+                        padding-bottom: 15px;
+                        justify-content: center;
+                        display: flex;
+                    }
                 }
             }
         }
@@ -1231,6 +1288,8 @@ body {
         .main_table {
             padding: 0;
             margin: 0;
+            max-height: 523px;
+            overflow-y: scroll;
 
             table {
                 thead {
@@ -1280,7 +1339,7 @@ body {
     }
 
     &__right {
-        width: 100%;
+        width: calc(100% - 324px);
         padding: 0;
 
         &_head {
@@ -1304,6 +1363,12 @@ body {
             padding-bottom: 11px;
             border-bottom: 1px solid $color-gray;
             margin-bottom: 11px;
+        }
+
+        .main_table {
+            table {
+                min-width: 830px;
+            }
         }
     }
 }
