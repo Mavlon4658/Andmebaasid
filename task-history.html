@@ -57,8 +57,6 @@
         <!-- Header end -->
 
         <!-- Login modal -->
-        
-        <!-- Modal -->
         <div class="modal fade" id="login_modal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="false">
             <div class="modal-dialog">
             <div class="modal-content">
@@ -91,46 +89,26 @@
             <section class="sort-block">
                 <div class="main_container">
                     <div class="d-flex justify-content-between sort-block__content">
-                        <div class="d-flex align-items-center sort-block__content_left">
+                        <div class="d-flex align-items-center sort-block__content_left task_history">
                             <div class="d-flex flex-column input_wrap task_history__input_wrap">
                                 <label>Ülesande nimi</label>
                                 <input type="text" class="input_gray" value="Ülesanne nr 2">
                             </div>
                             <div class="d-flex flex-column select_wrap">
                                 <label>Lause tüüp</label>
-                                <select>
-                                    <option selected hidden>Select advanced</option>
-                                    <option value="1">One</option>
-                                    <option value="2">Two</option>
-                                    <option value="3">Three</option>
-                                </select>
+                                <input type="text" class="input_gray" placeholder="Select advanced">
                             </div>
                             <div class="d-flex flex-column select_wrap">
                                 <label>Keerukus</label>
-                                <select>
-                                    <option selected hidden>Keskmine</option>
-                                    <option value="1">One</option>
-                                    <option value="2">Two</option>
-                                    <option value="3">Three</option>
-                                </select>
+                                <input type="text" class="input_gray" placeholder="Keskmine">
                             </div>
                             <div class="d-flex flex-column select_wrap">
                                 <label>Andmebaas</label>
-                                <select>
-                                    <option selected hidden>Postgresql</option>
-                                    <option value="1">One</option>
-                                    <option value="2">Two</option>
-                                    <option value="3">Three</option>
-                                </select>
+                                <input type="text" class="input_gray" placeholder="Postgresql">
                             </div>
                             <div class="d-flex flex-column select_wrap">
                                 <label>Lahendamise seisund</label>
-                                <select>
-                                    <option selected hidden>Tehtud</option>
-                                    <option value="1">One</option>
-                                    <option value="2">Two</option>
-                                    <option value="3">Three</option>
-                                </select>
+                                <input type="text" class="input_gray" placeholder="Tehtud">
                             </div>
                         </div>
                     </div>
@@ -164,7 +142,7 @@
                                     <div class="gray_alert">Katsed: 10</div>
                                     <div class="gray_alert">01.01.24 - 14:21:02</div>
                                 </div>
-                                <textarea class="main_textarea">select t.*
+                                <div class="text_block">select t.*
 from #Movements t
 LEFT JOIN (
 SELECT EventCode, MIN(CreateDate) as CreateDate
@@ -172,14 +150,14 @@ FROM #Movements
 WHERE EventCode = 'EMI'
 GROUP BY EventCode
 ) s on s.EventCode = t.EventCode and t.CreateDate > s.CreateDate
-where s.CreateDate is null</textarea>
+where s.CreateDate is null</div>
                             </div>
 
                             <div class="history__block_left__item_bottom">
                                 <div class="item__head">
                                     Tagasiside:
                                 </div>
-                                <textarea class="main_textarea">* Lause ei vasta ülesande tüübile (SELECT, INSERT, UPDATE, DELETE, MERGE, CREATE TABLE, ALTER TABLE, DROP TABLE)
+                                <div class="text_block">* Lause ei vasta ülesande tüübile (SELECT, INSERT, UPDATE, DELETE, MERGE, CREATE TABLE, ALTER TABLE, DROP TABLE)
 * Lauses üldine mittelubatud muster (SELECT, INSERT, UPDATE, DELETE, MERGE, CREATE TABLE, ALTER TABLE, DROP TABLE) xx
 * Lause ei vasta kõigile ülesande-spetsiifilistele nõutud mustritele (SELECT, INSERT, UPDATE, DELETE, MERGE, CREATE TABLE, ALTER TABLE, DROP TABLE) xx
 * Lauses ülesande-spetsiifiline mittelubatud muster (SELECT, INSERT, UPDATE, DELETE, MERGE, CREATE TABLE, ALTER TABLE, DROP TABLE) xx
@@ -187,7 +165,7 @@ where s.CreateDate is null</textarea>
 * Käivitamine ebaõnnestus (SELECT, INSERT, UPDATE, DELETE, MERGE, CREATE TABLE, ALTER TABLE, DROP TABLE)
 * Tulemuses nõutust rohkem veerge (SELECT)
 * Tulemuses nõutust vähem veerge (SELECT)
-                                </textarea>
+                                </div>
                             </div>
                         </div>
 
@@ -224,7 +202,7 @@ where s.CreateDate is null</textarea>
                                                 </span>
                                             </td>
                                             <td>
-                                                <span class="text_blue">Rohkem detaile</span>
+                                                <button class="text_blue" data-bs-toggle="modal" data-bs-target="#problem_solved_modal">Rohkem detaile</button>
                                             </td>
                                         </tr>
                                         <tr>
@@ -236,7 +214,7 @@ where s.CreateDate is null</textarea>
                                                 </span>
                                             </td>
                                             <td>
-                                                <span class="text_blue">Rohkem detaile</span>
+                                                <button class="text_blue" data-bs-toggle="modal" data-bs-target="#problem_solved_modal">Rohkem detaile</button>
                                             </td>
                                         </tr>
                                         <tr>
@@ -248,7 +226,7 @@ where s.CreateDate is null</textarea>
                                                 </span>
                                             </td>
                                             <td>
-                                                <span class="text_blue">Rohkem detaile</span>
+                                                <button class="text_blue" data-bs-toggle="modal" data-bs-target="#problem_solved_modal">Rohkem detaile</button>
                                             </td>
                                         </tr>
                                         <tr>
@@ -260,7 +238,7 @@ where s.CreateDate is null</textarea>
                                                 </span>
                                             </td>
                                             <td>
-                                                <span class="text_blue">Rohkem detaile</span>
+                                                <button class="text_blue" data-bs-toggle="modal" data-bs-target="#problem_solved_modal">Rohkem detaile</button>
                                             </td>
                                         </tr>
                                         <tr>
@@ -272,7 +250,7 @@ where s.CreateDate is null</textarea>
                                                 </span>
                                             </td>
                                             <td>
-                                                <span class="text_blue">Rohkem detaile</span>
+                                                <button class="text_blue" data-bs-toggle="modal" data-bs-target="#problem_solved_modal">Rohkem detaile</button>
                                             </td>
                                         </tr>
                                         <tr>
@@ -284,7 +262,7 @@ where s.CreateDate is null</textarea>
                                                 </span>
                                             </td>
                                             <td>
-                                                <span class="text_blue">Rohkem detaile</span>
+                                                <button class="text_blue" data-bs-toggle="modal" data-bs-target="#problem_solved_modal">Rohkem detaile</button>
                                             </td>
                                         </tr>
                                         <tr>
@@ -296,7 +274,7 @@ where s.CreateDate is null</textarea>
                                                 </span>
                                             </td>
                                             <td>
-                                                <span class="text_blue">Rohkem detaile</span>
+                                                <button class="text_blue" data-bs-toggle="modal" data-bs-target="#problem_solved_modal">Rohkem detaile</button>
                                             </td>
                                         </tr>
                                         <tr>
@@ -308,7 +286,7 @@ where s.CreateDate is null</textarea>
                                                 </span>
                                             </td>
                                             <td>
-                                                <span class="text_blue">Rohkem detaile</span>
+                                                <button class="text_blue" data-bs-toggle="modal" data-bs-target="#problem_solved_modal">Rohkem detaile</button>
                                             </td>
                                         </tr>
                                         <tr>
@@ -320,7 +298,7 @@ where s.CreateDate is null</textarea>
                                                 </span>
                                             </td>
                                             <td>
-                                                <span class="text_blue">Rohkem detaile</span>
+                                                <button class="text_blue" data-bs-toggle="modal" data-bs-target="#problem_solved_modal">Rohkem detaile</button>
                                             </td>
                                         </tr>
                                         <tr>
@@ -332,7 +310,7 @@ where s.CreateDate is null</textarea>
                                                 </span>
                                             </td>
                                             <td>
-                                                <span class="text_blue">Rohkem detaile</span>
+                                                <button class="text_blue" data-bs-toggle="modal" data-bs-target="#problem_solved_modal">Rohkem detaile</button>
                                             </td>
                                         </tr>
                                     </tbody>
@@ -373,6 +351,49 @@ where s.CreateDate is null</textarea>
             </div>
         </footer>
         <!-- Footer end -->
+
+        <!-- Problem solved modal -->
+        <div class="modal fade" id="problem_solved_modal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="false">
+            <div class="modal-dialog">
+            <div class="modal-content">
+                <button class="modal_close" data-bs-dismiss="modal" aria-label="Close">
+                    <img src="./images/close_icon.svg" alt="">
+                </button>
+                <h2 class="text-center main_title">Probleemi lahendamine - katse alates <span>01.01.24 - 14:21:02</span></h2>
+                <div class="d-flex align-items-center justify-content-between solved">
+                    <div class="d-flex align-items-center solved_item">
+                        Lahendus: 
+                        <span class="d-flex align-items-center text_danger">
+                            <img src="./images/close_danger_icon.png" alt="">
+                            Tekkis viga
+                        </span>
+                    </div>
+                    <div class="solved_item">01.01.24 - 14:21:02</div>
+                </div>
+                <div class="text_block">select t.*
+from #Movements t
+LEFT JOIN (
+SELECT EventCode, MIN(CreateDate) as CreateDate
+FROM #Movements
+WHERE EventCode = 'EMI'
+GROUP BY EventCode
+) s on s.EventCode = t.EventCode and t.CreateDate > s.CreateDate
+where s.CreateDate is null</div>
+                <div class="feedback">Tagasiside:</div>
+                <div class="text_block">* Lause ei vasta ülesande tüübile (SELECT, INSERT, UPDATE, DELETE, MERGE, CREATE TABLE, ALTER TABLE, DROP TABLE)
+* Lauses üldine mittelubatud muster (SELECT, INSERT, UPDATE, DELETE, MERGE, CREATE TABLE, ALTER TABLE, DROP TABLE) xx
+* Lause ei vasta kõigile ülesande-spetsiifilistele nõutud mustritele (SELECT, INSERT, UPDATE, DELETE, MERGE, CREATE TABLE, ALTER TABLE, DROP TABLE) xx
+* Lauses ülesande-spetsiifiline mittelubatud muster (SELECT, INSERT, UPDATE, DELETE, MERGE, CREATE TABLE, ALTER TABLE, DROP TABLE) xx
+* Lause pole õige tabeli põhjal (SELECT, INSERT, UPDATE, DELETE, MERGE)
+* Käivitamine ebaõnnestus (SELECT, INSERT, UPDATE, DELETE, MERGE, CREATE TABLE, ALTER TABLE, DROP TABLE)
+* Tulemuses nõutust rohkem veerge (SELECT)
+* Tulemuses nõutust vähem veerge (SELECT)
+
+                </div>
+            </div>
+            </div>
+        </div>
+        <!-- Problem solved modal end -->
 
     </div>
 

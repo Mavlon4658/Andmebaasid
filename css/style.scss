@@ -148,6 +148,16 @@ body {
     color: $color-dark;
 }
 
+.text_block {
+    border: 1px solid $color-gray;
+    border-radius: 5px;
+    padding: 20px;
+    white-space: pre-wrap;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 121%;
+}
+
 .select_wrap {
     select {
         -moz-appearance: none;
@@ -941,6 +951,25 @@ body {
                         flex-shrink: 0;
                         width: 174px;
                     }
+
+                    &.task_history {
+                        @include media(1420) {
+                            flex-wrap: wrap;
+                        }
+
+                        .task_history__input_wrap {
+                            @include media(1420) {
+                                width: 100%;
+                            }
+                        }
+
+                        .select_wrap {
+                            @include media(1420) {
+                                width: calc(25% - 26px * 3 / 4);
+                                margin: 0;
+                            }
+                        }
+                    }
                 }
             }
         }
@@ -1053,14 +1082,35 @@ body {
         padding-top: 11px;
         margin-top: 19px;
 
+        @include media(1430) {
+            gap: 30px;
+            justify-content: space-between;
+        }
+
         &_left {
-            width: 100%;
+            width: calc(100% - 742px);
+
+            @include media(1430) {
+                width: calc(100% - 672px);
+            }
+
+            @include media(1250) {
+                width: calc(50% - 15px);
+            }
 
             &__item {
                 &_top {
                     .item__head {
                         gap: 23px;
                         margin-bottom: 11px;
+
+                        @include media(1430) {
+                            gap: 15px;
+                        }
+
+                        @include media(1315) {
+                            flex-wrap: wrap;
+                        }
                     }
 
                     .gray_alert {
@@ -1076,6 +1126,10 @@ body {
                         padding: 0 16px;
                         border-radius: 5px;
                         white-space: nowrap;
+                        
+                        @include media(1315) {
+                            width: calc(50% - 7.5px);
+                        }
 
                         .text_danger {
                             display: flex;
@@ -1089,6 +1143,15 @@ body {
                             flex-shrink: 0;
                             justify-content: flex-start;
                             gap: 56px;
+
+                            @include media(1430) {
+                                width: auto;
+                            }
+
+                            @include media(1315) {
+                                width: 100%;
+                                justify-content: center;
+                            }
                         }
                     }
                 }
@@ -1118,6 +1181,10 @@ body {
         &_right {
             width: 642px;
             flex-shrink: 0;
+
+            @include media(1250) {
+                width: calc(50% - 15px);
+            }
 
             &__title {
                 font-size: 14px;
@@ -1369,3 +1436,67 @@ body {
     }
 }
 // Clear history modal end
+
+// Problem solved modal
+#problem_solved_modal {
+    .modal-dialog {
+        min-width: 1063px;
+
+        @include media(1150) {
+            min-width: calc(100% - 100px);
+        }
+    }
+
+    .modal-content {
+        padding: 35px 50px;
+        position: relative;
+
+        .modal_close {
+            position: absolute;
+            top: 34px;
+            right: 17px;
+            left: auto;
+        }
+
+        .main_title {
+            margin-bottom: 25px;
+
+            span {
+                color: $color-blue;
+            }
+        }
+
+        .solved {
+            margin-bottom: 11px;
+
+            &_item {
+                border: 1px solid $color-gray;
+                background: $color-light;
+                height: 40px;
+                align-items: center;
+                display: flex;
+                border-radius: 5px;
+                padding: 0 10px 0 14px;
+                gap: 12px;
+
+                &:nth-child(2) {
+                    padding: 0 50px;
+                }
+
+                .text_danger {
+                    color: $color-danger;
+                    gap: 4px;
+                }
+            }
+        }
+
+        .feedback {
+            border: 1px solid $color-gray;
+            background: $color-light;
+            margin: 25px 0 11px;
+            padding: 12px 20px 11px;
+            border-radius: 5px;
+        }
+    }
+}
+// Problem solved modal end

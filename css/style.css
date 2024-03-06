@@ -114,6 +114,16 @@ body {
   color: #363636;
 }
 
+.text_block {
+  border: 1px solid #EBEBEB;
+  border-radius: 5px;
+  padding: 20px;
+  white-space: pre-wrap;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 121%;
+}
+
 .select_wrap select {
   -moz-appearance: none;
   -webkit-appearance: none;
@@ -735,6 +745,22 @@ body {
   flex-shrink: 0;
   width: 174px;
 }
+@media screen and (max-width: 1420px) {
+  .history_wrap .sort-block__content_left.task_history {
+    flex-wrap: wrap;
+  }
+}
+@media screen and (max-width: 1420px) {
+  .history_wrap .sort-block__content_left.task_history .task_history__input_wrap {
+    width: 100%;
+  }
+}
+@media screen and (max-width: 1420px) {
+  .history_wrap .sort-block__content_left.task_history .select_wrap {
+    width: calc(25% - 19.5px);
+    margin: 0;
+  }
+}
 .history__head {
   margin-bottom: 11px;
 }
@@ -812,12 +838,38 @@ body {
   padding-top: 11px;
   margin-top: 19px;
 }
+@media screen and (max-width: 1430px) {
+  .history__block {
+    gap: 30px;
+    justify-content: space-between;
+  }
+}
 .history__block_left {
-  width: 100%;
+  width: calc(100% - 742px);
+}
+@media screen and (max-width: 1430px) {
+  .history__block_left {
+    width: calc(100% - 672px);
+  }
+}
+@media screen and (max-width: 1250px) {
+  .history__block_left {
+    width: calc(50% - 15px);
+  }
 }
 .history__block_left__item_top .item__head {
   gap: 23px;
   margin-bottom: 11px;
+}
+@media screen and (max-width: 1430px) {
+  .history__block_left__item_top .item__head {
+    gap: 15px;
+  }
+}
+@media screen and (max-width: 1315px) {
+  .history__block_left__item_top .item__head {
+    flex-wrap: wrap;
+  }
 }
 .history__block_left__item_top .gray_alert {
   width: 100%;
@@ -833,6 +885,11 @@ body {
   border-radius: 5px;
   white-space: nowrap;
 }
+@media screen and (max-width: 1315px) {
+  .history__block_left__item_top .gray_alert {
+    width: calc(50% - 7.5px);
+  }
+}
 .history__block_left__item_top .gray_alert .text_danger {
   display: flex;
   align-items: center;
@@ -844,6 +901,17 @@ body {
   flex-shrink: 0;
   justify-content: flex-start;
   gap: 56px;
+}
+@media screen and (max-width: 1430px) {
+  .history__block_left__item_top .gray_alert:nth-child(1) {
+    width: auto;
+  }
+}
+@media screen and (max-width: 1315px) {
+  .history__block_left__item_top .gray_alert:nth-child(1) {
+    width: 100%;
+    justify-content: center;
+  }
 }
 .history__block_left__item_bottom .item__head {
   border: 1px solid #EBEBEB;
@@ -864,6 +932,11 @@ body {
 .history__block_right {
   width: 642px;
   flex-shrink: 0;
+}
+@media screen and (max-width: 1250px) {
+  .history__block_right {
+    width: calc(50% - 15px);
+  }
 }
 .history__block_right__title {
   font-size: 14px;
@@ -1046,4 +1119,56 @@ body {
 #clear_history_modal .modal-content button.close, #clear_history_modal .modal-content a.close {
   font-size: 14px;
   line-height: 108.33%;
+}
+
+#problem_solved_modal .modal-dialog {
+  min-width: 1063px;
+}
+@media screen and (max-width: 1150px) {
+  #problem_solved_modal .modal-dialog {
+    min-width: calc(100% - 100px);
+  }
+}
+#problem_solved_modal .modal-content {
+  padding: 35px 50px;
+  position: relative;
+}
+#problem_solved_modal .modal-content .modal_close {
+  position: absolute;
+  top: 34px;
+  right: 17px;
+  left: auto;
+}
+#problem_solved_modal .modal-content .main_title {
+  margin-bottom: 25px;
+}
+#problem_solved_modal .modal-content .main_title span {
+  color: #4C4FDD;
+}
+#problem_solved_modal .modal-content .solved {
+  margin-bottom: 11px;
+}
+#problem_solved_modal .modal-content .solved_item {
+  border: 1px solid #EBEBEB;
+  background: #F8F8F8;
+  height: 40px;
+  align-items: center;
+  display: flex;
+  border-radius: 5px;
+  padding: 0 10px 0 14px;
+  gap: 12px;
+}
+#problem_solved_modal .modal-content .solved_item:nth-child(2) {
+  padding: 0 50px;
+}
+#problem_solved_modal .modal-content .solved_item .text_danger {
+  color: #E90000;
+  gap: 4px;
+}
+#problem_solved_modal .modal-content .feedback {
+  border: 1px solid #EBEBEB;
+  background: #F8F8F8;
+  margin: 25px 0 11px;
+  padding: 12px 20px 11px;
+  border-radius: 5px;
 }/*# sourceMappingURL=style.css.map */
