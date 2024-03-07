@@ -492,6 +492,12 @@ body {
   overflow: hidden;
   height: 100%;
   margin-top: 24px;
+  min-height: calc(100vh - 205px);
+}
+@media screen and (max-width: 1420px) {
+  .resizable-block {
+    min-height: calc(100vh - 376px);
+  }
 }
 .resizable-block .resizer-x {
   position: relative;
